@@ -64,11 +64,12 @@ public:
         }       
     }
 
-    const void BuildQuery() noexcept {
+    string BuildQuery() noexcept {
         BuildQueryForm();  
-        std::cout << "\"\SELECT " << SqlSelectQuery.SELECT_1  << " FROM " << SqlSelectQuery.FROM << " WHERE " << SqlSelectQuery.AND_1
-        << "=" << SqlSelectQuery.AND_2 << " AND " << SqlSelectQuery.WHERE_1 << "=" << SqlSelectQuery.WHERE_2 << ";\"\ " << std::endl;
-        
+        string s;
+        s = "\"\SELECT "+SqlSelectQuery.SELECT_1 + " FROM " + SqlSelectQuery.FROM + " WHERE " + SqlSelectQuery.AND_1
+        + "=" + SqlSelectQuery.AND_2 + " AND " + SqlSelectQuery.WHERE_1 + "=" + SqlSelectQuery.WHERE_2 + ";\"\ ";  
+        return s;
     }
     private:
     SqlSelectQuery SqlSelectQuery;
