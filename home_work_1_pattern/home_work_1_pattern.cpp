@@ -12,7 +12,7 @@ int main(){
     query_builder.AddFrom("students").AddFrom("students_1");
     query_builder.AddColumn("name").AddColumn("phone");
     
-    assert(query_builder.BuildQuery()=="\"\SELECT name, phone FROM students_1 WHERE id=42 AND name=John;\"\ ");
-
+    assert(query_builder.BuildQuery() == "\"\SELECT name, phone FROM students_1 WHERE id=42 AND name=John;\"\ ");
+   
     return EXIT_SUCCESS;
 }
